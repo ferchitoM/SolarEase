@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/inclinacion_textview"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Inclinación paneles: 30º"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inclinacion"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/area"
+        android:layout_width="307dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Área paneles (m2)"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/inclinacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/longitud"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/longitud"
+        android:layout_width="307dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Longitud (grados decimales)"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/area"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latitud"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/atomic_age"
+        android:text="SolarEase"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/latitud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/latitud"
+        android:layout_width="307dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Latitud (grados decimales)"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/longitud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_textview"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <SeekBar
+        android:id="@+id/inclinacion"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:indeterminate="false"
+        android:max="90"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:progress="30"
+        app:layout_constraintBottom_toTopOf="@+id/inclinacion_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/area"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcular"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/calcular"
+        android:layout_width="307dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="20dp"
+        android:text="CALCULAR PRODUCCIÓN DE ENERGÍA"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inclinacion_textview"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
